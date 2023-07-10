@@ -80,7 +80,7 @@ class _LoginPageState extends State<LoginPage> {
     // TODO: implement initState
     super.initState();
     checkSignIn();
-    Timer.periodic(const Duration(minutes: 59), (Timer t) async {
+    Timer.periodic(const Duration(minutes: 50), (Timer t) async {
       await refreshToken();
     });
   }
@@ -112,7 +112,7 @@ class _LoginPageState extends State<LoginPage> {
   checkSignIn() async {
     if (await googleSignIn.isSignedIn()) {
       refreshToken().then((value) {
-        Navigator.push(
+        Navigator.pushReplacement(
           context,
           MaterialPageRoute(
             builder: ((context) => const AppRetainWidget(

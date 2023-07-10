@@ -35,7 +35,7 @@ Future<void> main() async {
         ChangeNotifierProvider<Controller>(create: (_) => Controller()),
         // ChangeNotifierProvider<AuthController>(create: (_) => AuthController()),
       ],
-      child: const AppRetainWidget(child: MyApp()),
+      child: MyApp(),
     ),
   );
 }

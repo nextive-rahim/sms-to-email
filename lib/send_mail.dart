@@ -62,6 +62,7 @@ class _EmailSenderState extends State<EmailSender> {
   }
 
   loadData() async {
+    print('Send Mail Function Called Successfully');
     final prefs = await SharedPreferences.getInstance();
     timeStamp = prefs.getInt('time');
     toEmail = prefs.getStringList('email') ?? [];
